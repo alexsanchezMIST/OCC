@@ -19,12 +19,14 @@
 // ********************
 
 @import "3-globals/base";
+@import "3-globals/font-face";
 @import "3-globals/typography";
 
 // ********************
 // 4 - COMPONENTS
 // ********************
 
+@import "4-components/button";
 @import "4-components/container";
 @import "4-components/section";
 
@@ -35,3 +37,5 @@
 // ********************
 // 6 - PAGES
 // ********************
+
+@import "6-pages/index";

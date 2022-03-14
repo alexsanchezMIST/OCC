@@ -1,0 +1,120 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{# BEGIN HERO SECTION #}
+<section id="hero" class="section">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1 class="hero__heading">Connecting Canadians<br/>to the Outdoors</h1>
+            <p class="hero__subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut error id in unde perferendis odio impedit enim.</p>
+            <a href="/" class="btn btn--primary">Become a member →</a>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN RESOURCES SECTION #}
+<section id="resources" class="section">
+    <div class="container">
+        <h2 class="section__heading">Our Resources</h2>
+        <div class="resources__wrapper">
+            <div>
+                <h3>Documents</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+</section>
+{# END RESOURCES SECTION #}
+
+{# BEGIN PROJECTS SECTION #}
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section__heading">Our Projects</h2>
+        <div class="projects__wrapper">
+            <div class="projects__tabs-wrapper">
+                <div class="projects__tab">
+                    <a href="#" class="projects__label">
+                        <span>1.</span>
+                        Field Leader
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{# END PROJECTS SECTION #}
+
+{# BEGIN ABOUT SECTION #}
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section__heading">About the Outdoor Council of Canada</h2>
+        <div class="about__grid">
+            <div class="about__grid__left">
+                <p>"The timing of bringing the OCC to Nova Scotia was perfect. There was a community of outdoor practitioners who were looking for something to unite them, and also provide training. The OCC was that vehicle. We started a regional chapter and developed a partnership with Hike Nova Scotia, and the result has been a stronger and more proficient outdoor community."</p>
+                <div>
+                    <p>John Glynn-Morris</p>
+                    <p>Ex-Hike Nova Scotia Board Member</p>
+                </div>
+            </div>
+            <article class="prose">
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis quam ac sodales pellentesque. Vivamus eros ex, euismod vitae felis ut, gravida varius ante. Nulla facilisi.</p>
+                <p>Vivamus congue justo mauris, eget tincidunt ante pulvinar vel. Suspendisse nec scelerisque libero. Proin vestibulum id ipsum eu condimentum. Sed finibus eget lectus nec eleifend. Praesent turpis odio, cursus id tempor eget, varius vel magna. Praesent sodales iaculis neque. Nunc tempor sem ut ornare aliquam. Ut quis congue purus, et interdum nibh. Fusce sodales molestie elit et pharetra. Aliquam luctus urna id tortor blandit convallis. In hac habitasse platea dictumst. Cras dictum rhoncus lobortis. Donec viverra aliquam sapien sed faucibus. Curabitur ac orci varius, porttitor urna sed, luctus tortor. Donec tristique sem turpis, et facilisis diam hendrerit vitae. Nam ultrices tempus interdum. Aliquam dignissim nulla ac nisi aliquam scelerisque. Vivamus ornare, massa sit amet rhoncus convallis, sapien lacus ultrices ligula, eget egestas dolor dolor vel sem. Integer efficitur mattis vehicula. Nunc congue mauris et turpis vulputate tincidunt. Vestibulum sed tincidunt felis.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{# END ABOUT SECTION #}
+
+{# BEGIN COURSES SECTION #}
+<section id="courses" class="section">
+    <div class="container">
+        <h2 class="section__heading">Our Courses</h2>
+        <div class="courses__wrapper">
+            <div class="courses__card">
+                <img src="/" alt="">
+                <h3 class="courses__heading">Course Name</h3>
+                <p class="courses__summary">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div>
+                <a href="/" class="btn--secondary">View all Courses →</a>
+            </div>
+        </div>
+    </div>
+</section>
+{# END COURSES SECTION #}
+
+{# BEGIN MEMBER SECTION #}
+<section id="member" class="section">
+    <div class="container">
+        <div class="member__card">
+            <div>
+                <h2 class="section__heading">Become a member</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <a href="/" class="btn--primary">Join Us →</a>
+            </div>
+        </div>
+    </div>
+</section>
+{# END MEMBER SECTION #}
+
+{# BEGIN CONTACT SECTION #}
+<section id="contact" class="section">
+    <img src="/" alt="">
+    <div class="container">
+        <h2 class="section__heading">Contact Us</h2>
+        <form action="POST">
+            <input type="text" placeholder="First name" id="first-name" required>
+            <input type="text" placeholder="Last name" id="last-name" required>
+            <input type="email" placeholder="Enter your email address" id="email" required>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+        <p>Or just email<br/>
+            <a href="mailto:admin@outdoorcouncil.ca">admin@outdoorcouncil.ca</a>
+        </p>
+    </div>
+</section>
+{# END CONTACT SECTION #}
+
+{% endblock %}

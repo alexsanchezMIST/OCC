@@ -1,0 +1,27 @@
+.hero__wrapper,
+.intro__wrapper {
+  width: 100%;
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__heading {
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.hero__subheading + a {
+  margin-top: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 2.5rem;
+  }
+}
+
+.section__heading {
+  text-align: center;
+}

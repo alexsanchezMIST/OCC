@@ -9,5 +9,9 @@
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "@fontsource/overpass": "^4.5.4",
+    "@fontsource/public-sans": "^4.5.3"
   }
 }
