@@ -1,5 +1,6 @@
 body {
   font-family: "Public Sans", sans-serif;
+  color: map-get($slate, "500");
 }
 
 h1,
@@ -12,6 +13,8 @@ h6 {
 }
 
 h1 {
+  color: map-get($slate, "900");
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -45,6 +48,8 @@ h1 {
 }
 
 h2 {
+  color: map-get($slate, "900");
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -138,4 +143,56 @@ h4 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+}
+
+.prose {
+  width: 100%;
+  max-width: 65ch;
+}
+
+.prose p {
+  margin: 1.25rem 0;
+
+  @media screen and (max-width: map-get($breakpoints, "small")) {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.prose h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose img {
+  margin: 2.5rem 0;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }

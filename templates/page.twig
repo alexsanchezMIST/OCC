@@ -3,11 +3,11 @@
 {% block content %}
 
 {# BEGIN HERO SECTION #}
-<section id="hero" class="section">
+<section id="hero--page" class="section section--hero">
     <div class="container">
         <div class="hero__wrapper">
-            <h1>{{ post.title }}</h1>
-            <a href="/" class="btn--primary">Become a member →</a>
+            <h1 class="hero__heading--page">{{ post.title }}</h1>
+            <a href="/" class="btn btn--primary">Become a member →</a>
         </div>
     </div>
 </section>
@@ -16,9 +16,11 @@
 {# BEGIN CONTENT SECTION #}
 <section id="content" class="section">
     <div class="container">
-        <article id="post-{{ post.ID }}" class="content__body post-type-{{ post.post_type }}">
-            {{ post.content }}
-		</article>
+        <div class="content__wrapper">
+            <article id="post-{{ post.ID }}" class="prose--cos post-type-{{ post.post_type }}">
+                {{ post.content }}
+            </article>
+        </div>
     </div>
 </section>
 {# END CONTENT SECTION #}

@@ -1,3 +1,10 @@
+#hero {
+  background-image: url("static/img/occ-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 .hero__wrapper,
 .intro__wrapper {
   width: 100%;
@@ -7,11 +14,16 @@
 }
 
 .hero__heading {
+  color: $white;
   margin-bottom: 0.625rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
     margin-bottom: 1.25rem;
   }
+}
+
+.hero__subheading {
+  color: rgba($white, 0.8);
 }
 
 .hero__subheading + a {
@@ -22,6 +34,466 @@
   }
 }
 
+#projects {
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/border-jagged.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      top: 0rem;
+      height: 2.5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      top: 0rem;
+      height: 5rem;
+    }
+  }
+}
+
 .section__heading {
   text-align: center;
+}
+
+.resources__wrapper {
+  display: grid;
+  grid-gap: 1.875rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+}
+
+.resources__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid map-get($slate, "100");
+  border-radius: 0.5rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 2.5rem;
+  }
+}
+
+#dei,
+#impact,
+#leading {
+  &::before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: -3.75rem;
+    right: 0;
+    left: 0;
+    width: 5rem;
+    height: 7.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+#dei {
+  &::before {
+    background-image: url("static/img/resource-dei-small.png");
+  }
+}
+
+#impact {
+  &::before {
+    background-image: url("static/img/resource-impact-small.png");
+  }
+}
+
+#leading {
+  &::before {
+    background-image: url("static/img/resource-leading-small.png");
+  }
+}
+
+.resources__heading {
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.resources__summary {
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+#projects {
+  background-color: $glacier;
+}
+
+.projects__card {
+  width: 100%;
+  max-width: 60.625rem;
+  margin: 0 auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  background-image: url("static/img/member.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem;
+  }
+}
+
+.projects__left {
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.projects__heading {
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 0.625rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.projects__subheading {
+  color: rgba($white, 0.8);
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.about__wrapper {
+  display: grid;
+  grid-gap: 3.75rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+}
+
+.about__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.about__testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $amaranth;
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 2.5rem;
+  }
+}
+
+.about__right {
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 3 / span 3;
+  }
+}
+
+.testimonial__copy {
+  margin-bottom: 0.625rem;
+}
+
+#courses {
+  background-color: map-get($slate, "50");
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-top: 5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 10rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/mountains.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      top: -5rem;
+      height: 5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      top: -10rem;
+      height: 10rem;
+    }
+  }
+}
+
+.courses__wrapper {
+  @extend .resources__wrapper;
+}
+
+.courses__card {
+  @extend .resources__card;
+}
+
+.courses__heading {
+  @extend .resources__heading;
+}
+
+.courses__summary {
+  @extend .resources__summary;
+}
+
+.member__card {
+  width: 100%;
+  max-width: 60.625rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  text-align: center;
+  background-image: url("static/img/member.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding: 2.5rem 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 2.5rem;
+  }
+}
+
+.member__heading {
+  color: $white;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 0.625rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.member__subheading {
+  color: rgba($white, 0.8);
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+#contact-form {
+  width: 100%;
+  max-width: 48.125rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.875rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+}
+
+input {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
+  background-color: map-get($slate, "50");
+  border-radius: 0.25rem;
+  border: unset;
+}
+
+#contact {
+  @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
+    padding-top: 2.5rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 17.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
+    padding-top: 3.75rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 18.75rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    padding-top: 5rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 20rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
+    padding-top: 6.25rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 36.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
+    padding: 7.5rem 0;
+    padding-top: 7.5rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 37.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "2xl")) {
+    padding-top: 8.75rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 38.75rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/mountain-range.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      height: 15rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      height: 30rem;
+    }
+  }
+}
+
+#contact-form > input[type="text"] {
+  grid-column: span 1 / span 1;
+}
+
+#contact-form > input[type="email"],
+#contact-form > input[type="submit"] {
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-column: span 1 / span 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+input[type="submit"] {
+  @extend .btn;
+  @extend .btn--primary;
+
+  height: 3.5rem;
+  padding: unset;
+  cursor: pointer;
+}
+
+.contact__email-wrapper {
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-top: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 2.5rem;
+  }
+}
+
+.contact__email {
+  color: $amaranth;
 }
