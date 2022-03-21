@@ -1,9 +1,9 @@
 #hero--page {
   background-color: map-get($slate, "50");
-  background-image: url("static/img/cos-hero.jpg");
+  /*   background-image: url("static/img/cos-hero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; */
 
   @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
     padding-top: 3.75rem;
