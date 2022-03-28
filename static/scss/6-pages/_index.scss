@@ -526,7 +526,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-._form {
+._form ._form_3 {
   padding: 2.5rem 1.25rem;
   border: 1px solid map-get($slate, "100");
 }
@@ -535,7 +535,7 @@ input[type="submit"] {
   @extend h3;
 }
 
-._form_element _x54192622 {
+._form_element ._x54192622 {
   margin: 1.25rem 0;
 }
 
