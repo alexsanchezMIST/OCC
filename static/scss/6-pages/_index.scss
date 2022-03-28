@@ -496,10 +496,15 @@ input,
   }
 }
 
-#fullname,
-#email,
-input[type="text"] {
+#_form_62421E914DE30_ input[type="text"],
+#_form_62421E914DE30_ input[type="date"],
+#_form_62421E914DE30_ textarea {
   border: none;
+  height: 3.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
 }
 
 input[type="submit"] {
@@ -514,6 +519,14 @@ input[type="submit"] {
 ._form {
   padding: 2.5rem 1.25rem;
   border: 1px solid map-get($slate, "100");
+}
+
+._form-title {
+  @extend h3;
+}
+
+._form_element _x54192622 {
+  margin: 1.25rem 0;
 }
 
 .contact__email-wrapper {
