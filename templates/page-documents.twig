@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{# BEGIN HERO SECTION #}
+<section id="hero--page" class="section section--hero">
+    <div class="container">
+        <div class="hero__wrapper">
+            <h1 class="hero__heading--page">{{ post.title }}</h1>
+            <a href="/" class="btn btn--primary">Become a memberfffff →</a>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN CONTENT SECTION #}
+<section id="content" class="section">
+    <div class="container">
+        <div class="content__wrapper">
+            <article id="post-{{ post.ID }}" class="prose--cos post-type-{{ post.post_type }}">
+                {{ post.content }}
+            </article>
+        </div>
+        <a href="/" class="content__download">
+            <div class="download__left">
+                <div class="icon"></div>
+            </div>
+            <div class="download__right">
+                <p class="download__copy">View your resources</p>
+            </div>
+        </a>
+    </div>
+</section>
+{# END CONTENT SECTION #}
+
+
+{% endblock %}
