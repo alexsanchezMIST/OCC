@@ -458,6 +458,16 @@ input,
     padding-left: 0;
     padding-bottom: 38.75rem;
   }
+}
+
+#mountains {
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    min-height: 15rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    min-height: 30rem;
+  }
 
   &::after {
     content: "";
