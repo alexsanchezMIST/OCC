@@ -1,3 +1,12 @@
+// ********************
+// GLOBAL FORMS
+// ********************
+
+input {
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+
 input[type="submit"] {
   @extend .btn;
   @extend .btn--primary;
@@ -6,6 +15,10 @@ input[type="submit"] {
   padding: unset;
   cursor: pointer;
 }
+
+// ********************
+// ACTIVE CAMPAIGN FORMS
+// ********************
 
 ._form {
   box-shadow: 0 10px 15px -3px rgba($black, 0.1),
@@ -78,11 +91,6 @@ input {
   background-color: map-get($slate, "50");
   border-radius: 0.25rem;
   border: unset;
-}
-
-input {
-  height: 100%;
-  padding: 0.5rem 1rem;
 }
 
 ._submit {
