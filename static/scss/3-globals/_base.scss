@@ -1,27 +1,13 @@
 @import "~@fontsource/overpass/100.css";
-@import "~@fontsource/overpass/200.css";
-@import "~@fontsource/overpass/300.css";
-@import "~@fontsource/overpass/400.css";
-@import "~@fontsource/overpass/500.css";
-@import "~@fontsource/overpass/600.css";
-@import "~@fontsource/overpass/700.css";
-@import "~@fontsource/overpass/800.css";
-@import "~@fontsource/overpass/900.css";
 @import "~@fontsource/public-sans/100.css";
-@import "~@fontsource/public-sans/200.css";
-@import "~@fontsource/public-sans/300.css";
-@import "~@fontsource/public-sans/400.css";
-@import "~@fontsource/public-sans/500.css";
-@import "~@fontsource/public-sans/600.css";
-@import "~@fontsource/public-sans/700.css";
-@import "~@fontsource/public-sans/800.css";
-@import "~@fontsource/public-sans/900.css";
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  overflow-x: hidden;
+
   @media (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
     font-size: 0.875rem; // 14px
   }

@@ -1,0 +1,87 @@
+#hello {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem 0;
+  width: 100vw;
+  background-color: $cello;
+}
+
+.hello__container {
+  @extend .container;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hello__heading {
+  color: $white;
+}
+
+.hello__subheading {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: map-get($slate, "400");
+}
+
+#_form_9_ {
+  box-shadow: unset;
+  border-radius: unset;
+}
+
+._form-content--hello {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+._field-wrapper--hello > input {
+  height: 2.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+._form_element--hello {
+  margin-right: 1.25rem;
+}
+
+._submit--hello {
+  @extend .btn;
+  @extend .btn--primary;
+  height: 2.75rem;
+  font-size: 1rem;
+}
+
+._form-label {
+  display: none;
+}
+
+.hello__close-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: centerl;
+  opacity: 0.75;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.hello__close-icon {
+  width: auto;
+  height: 1.75rem;
+}

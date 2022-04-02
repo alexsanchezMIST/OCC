@@ -3,7 +3,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 999;
+  z-index: 900;
 }
 
 .nav-main {
@@ -14,6 +14,15 @@ header {
   background-color: $white;
   box-shadow: 0 10px 15px -3px rgba($black, 0.1),
     0 4px 6px -4px rgba($black, 0.1);
+}
+
+.nav__container {
+  @extend .container;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__menu {
@@ -33,4 +42,9 @@ header {
       color: $amaranth;
     }
   }
+}
+
+.nav__logo {
+  width: auto;
+  height: 3rem;
 }

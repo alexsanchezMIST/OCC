@@ -11,15 +11,17 @@
 		<header class="header" >
 			{% block header %}
 				<nav id="nav-main" class="nav-main" role="navigation">
-					<div class="container">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home"></a>
+					<div class="nav__container">
+						<a href="/" rel="home" class="nav__brand">
+							<img src="{{ theme.path ~ '/static/img/occ-logo.svg' }}" alt="" class="nav__logo">
+						</a>
 						{% include "menu.twig" with {'items': menu.get_items} %}
 					</div>
 				</nav>
 			{% endblock %}
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
+		<main id="main" role="main" class="content-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
 			<div class="wrapper {{sidebar_class}}">
 				{% block content %}
@@ -31,7 +33,7 @@
 					{{sidebar}}
 				</aside>
 			{% endif %}
-		</section>
+		</main>
 
 		{% block footer %}
 			<footer id="footer">
@@ -40,6 +42,9 @@
 			{{ function('wp_footer') }}
 		{% endblock %}
 
+	{% include 'partial/hello-bar.twig' %}
+
+	<script src="https://unpkg.com/alpinejs"></script>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>AOS.init({
 		duration: 300, 

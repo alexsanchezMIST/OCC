@@ -3,13 +3,22 @@
 {% block content %}
 
 {# BEGIN HERO SECTION #}
-<section id="hero" class="section section--hero">
+<section id="hero" class="section section--hero" x-data="{ open: false }">
     <div class="container">
         <div class="hero__wrapper">
-            <h1 class="hero__heading" data-aos="fade-up">Connecting Canadians<br/>to the Outdoorsfff</h1>
+            <button class="hero__play-btn" @click="open = true">
+                <img src="{{ theme.path ~ '/static/img/play.svg' }}" alt="">
+            </button>
+            <h1 class="hero__heading" data-aos="fade-up">Connecting Canadians<br/>to the Outdoors</h1>
             <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut error id in unde perferendis odio impedit enim.</p>
             <a href="/" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
         </div>
+    </div>
+    <div class="hero__modal" x-cloak x-show="open" x-transition>
+        <div class="hero__video-wrapper">
+            <iframe class="hero__video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/tNaRQ2HmyTQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <button class="hero__modal__close" @click="open = false">Close</button>        
     </div>
 </section>
 {# END HERO SECTION #}
@@ -20,17 +29,17 @@
         <h2 class="section__heading" data-aos="fade-up">Our Resources</h2>
         <div class="resources__wrapper" data-aos="fade" data-aos-delay="50">
             <div id="dei" class="resources__card">
-                <h3 class="resources__heading">Documents</h3>
+                <h3 class="resources__heading">DEI Resource List</h3>
                 <p class="resources__summary">Lorem ipsum dolor sit amet</p>
                 <a href="/dei-download" target="_blank" class="btn btn--secondary">Download now<span class="download-icon"></span></a>
             </div>
             <div id="impact" class="resources__card">
-                <h3 class="resources__heading">Documents</h3>
+                <h3 class="resources__heading">Economic Impact Study</h3>
                 <p class="resources__summary">Lorem ipsum dolor sit amet</p>
                 <a href="/economic-download" target="_blank" class="btn btn--secondary">Download now<span class="download-icon"></span></a>
             </div>
             <div id="leading" class="resources__card">
-                <h3 class="resources__heading">Documents</h3>
+                <h3 class="resources__heading">Guidebook</h3>
                 <p class="resources__summary">Lorem ipsum dolor sit amet</p>
                 <a href="/guidebook-download" target="_blank" class="btn btn--secondary">Download now<span class="download-icon"></span></a>
             </div>
@@ -43,18 +52,29 @@
 <section id="projects" class="section">
     <div class="container">
         <h2 class="section__heading" data-aos="fade-up">Our Projects</h2>
-        <div class="projects__wrapper">
+        <div class="projects__wrapper" x-data="{ tab: 'field' }">
             <div class="projects__tabs-wrapper">
-                <div class="projects__tab">
-                    <a href="#" class="projects__label">
-                        <span>1.</span>
-                        Field Leader
-                    </a>
+                <a href="#" class="projects__tab { 'active': tab === 'field' }" @click.prevent="tab = 'field'">1. Field Leader Program</a>
+                <a href="#" class="projects__tab { 'active': tab === 'training' }" @click.prevent="tab = 'training'">2. Training Providers</a>
+                <a href="#" class="projects__tab { 'active': tab === 'other' }" @click.prevent="tab = 'other'">3. Other Outdoor Organizations</a>
+            </div>
+            <div id="field" class="projects__card" x-show="tab === 'field'" x-transition.opacity>
+                <div class="projects__left">
+                    <h2 class="projects__heading">Field Leader Program</h2>
+                    <p class="projects__subheading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    <a href="/" class="btn btn--primary">Become a member →</a>
                 </div>
             </div>
-            <div class="projects__card">
+            <div id="training" class="projects__card" x-show="tab === 'training'" x-transition.opacity>
                 <div class="projects__left">
-                    <h2 class="projects__heading">Become a member</h2>
+                    <h2 class="projects__heading">Training Providers</h2>
+                    <p class="projects__subheading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    <a href="/" class="btn btn--primary">Become a member →</a>
+                </div>
+            </div>
+            <div id="other" class="projects__card" x-show="tab === 'other'" x-transition.opacity>
+                <div class="projects__left">
+                    <h2 class="projects__heading">Other Outdoor Organizations</h2>
                     <p class="projects__subheading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
                     <a href="/" class="btn btn--primary">Become a member →</a>
                 </div>
@@ -117,14 +137,33 @@
 </section>
 {# END COURSES SECTION #}
 
+{# BEGIN CAROUSEL SECTION #}
+<section id="carousel" class="section">
+    <div class="container">
+        <div class="carousel__wrapper">
+            <img src="{{ theme.path ~ '/static/img/aequebec.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/black-diamond.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/cwf.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/expertvoice.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/hikens.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/iga.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/joelette.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/ucalgary.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/viristar.svg'}}" alt="" class="carousel__logo">
+            <img src="{{ theme.path ~ '/static/img/zoppinh.svg'}}" alt="" class="carousel__logo">
+        </div>
+    </div>
+</section>
+{# END CAROUSEL SECTION #}
+
 {# BEGIN MEMBER SECTION #}
 <section id="member" class="section">
     <div class="container">
         <div class="member__card">
-            <div>
+            <div class="member__left">
                 <h2 class="member__heading">Become a member</h2>
-                <p class="member__subheading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                <a href="/" class="btn btn--primary">Become a member →</a>
+                <p class="member__subheading">If you care about the transformational power of going outdoors and increasing the number of people accessing these experiences, join our efforts and become a member.</p>
+                <a href="/" class="btn btn--primary">Join us →</a>
             </div>
         </div>
     </div>
