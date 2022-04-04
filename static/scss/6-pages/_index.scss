@@ -1,3 +1,7 @@
+// ********************
+// HERO SECTION
+// ********************
+
 #hero {
   background-image: url("static/img/occ-hero.jpg");
   background-repeat: no-repeat;
@@ -92,6 +96,10 @@
   }
 }
 
+// ********************
+// PROJECTS SECTION
+// ********************
+
 #projects {
   &::before {
     content: "";
@@ -119,6 +127,10 @@
 .section__heading {
   text-align: center;
 }
+
+// ********************
+// RESOURCES SECTION
+// ********************
 
 .resources__wrapper {
   display: grid;
@@ -226,6 +238,10 @@
   }
 }
 
+// ********************
+// PROJECTS SECTION
+// ********************
+
 #projects {
   background-color: #f3f8fa;
 
@@ -331,6 +347,10 @@
   }
 }
 
+// ********************
+// ABOUT SECTION
+// ********************
+
 .about__wrapper {
   display: grid;
   grid-gap: 3.75rem;
@@ -386,6 +406,10 @@
   margin-bottom: 0.625rem;
 }
 
+// ********************
+// COURSES SECTION
+// ********************
+
 #courses {
   background-color: map-get($slate, "50");
 
@@ -435,6 +459,10 @@
 .courses__summary {
   @extend .resources__summary;
 }
+
+// ********************
+// MEMBER SECTION
+// ********************
 
 .member__card {
   width: 100%;
@@ -488,25 +516,9 @@
   }
 }
 
-#contact-form {
-  width: 100%;
-  max-width: 48.125rem;
-  margin: 0 auto;
-  display: grid;
-  gap: 1.875rem;
-
-  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-template-rows: repeat(4, minmax(0, 1fr));
-    margin-top: 2.5rem;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-    margin-top: 5rem;
-  }
-}
+// ********************
+// CONTACT SECTION
+// ********************
 
 #contact {
   padding-right: 0;
@@ -537,6 +549,62 @@
     padding-top: 8.75rem;
   }
 }
+
+#contact-form {
+  width: 100%;
+  max-width: 48.125rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.875rem;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    margin-top: 5rem;
+  }
+}
+
+#contact-form > input[type="text"] {
+  grid-column: span 1 / span 1;
+}
+
+#contact-form > input[type="email"],
+#contact-form > input[type="submit"] {
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-column: span 1 / span 1;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 2 / span 2;
+  }
+}
+
+.contact__email-wrapper {
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-top: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 2.5rem;
+  }
+}
+
+.contact__email {
+  color: $amaranth;
+}
+
+// ********************
+// MOUNTAINS SECTION
+// ********************
 
 #mountains {
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
@@ -586,37 +654,9 @@
   }
 }
 
-#contact-form > input[type="text"] {
-  grid-column: span 1 / span 1;
-}
-
-#contact-form > input[type="email"],
-#contact-form > input[type="submit"] {
-  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    grid-column: span 1 / span 1;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    grid-column: span 2 / span 2;
-  }
-}
-
-.contact__email-wrapper {
-  margin: 0 auto;
-  text-align: center;
-
-  @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    margin-top: 1.25rem;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    margin-top: 2.5rem;
-  }
-}
-
-.contact__email {
-  color: $amaranth;
-}
+// ********************
+// CAROUSEL SECTION
+// ********************
 
 .carousel__wrapper {
   display: flex;
@@ -628,7 +668,38 @@
 
 .carousel__wrapper > img {
   width: auto;
-  height: 3rem;
   margin: 0 2.5rem;
   opacity: 0.5;
+}
+
+.carousel__logo--expert-voice,
+.carousel__logo--zoppinh {
+  height: 2.5rem;
+}
+
+.carousel__logo--aeq,
+.carousel__logo--joelette,
+.carousel__logo--hikens,
+.carousel__logo--viristar,
+.carousel__logo--cwf,
+.carousel__logo--black-diamond {
+  height: 3rem;
+}
+
+.carousel__logo--iga {
+  height: 3.5rem;
+}
+
+.carousel__logo--ucalgary {
+  height: 3.75rem;
+}
+
+.gfield-choice-input {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.gform_button {
+  @extend .btn;
+  @extend .btn--primary;
 }
