@@ -204,3 +204,28 @@ h4 {
 strong {
   color: map-get($slate, "600");
 }
+
+.prose {
+  ul > li {
+    position: relative;
+    padding-left: 2.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: url("static/img/leaf-filled.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+}
+
+.prose blockquote {
+  border-left: 10px solid $amaranth;
+  padding-left: 2.5rem;
+}

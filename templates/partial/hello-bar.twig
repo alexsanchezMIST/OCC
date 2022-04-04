@@ -1,4 +1,4 @@
-<div id="hello" class="hello">
+<div id="hello" class="hello" x-data="{ open: true }" x-show="open">
     <div class="hello__container">
         <div class="hello__left">
             <h4 class="hello__heading">Is your outdoor program resilient?</h4>
@@ -33,7 +33,7 @@
             </div>
             <div class="_form-thank-you" style="display:none;"></div>
         </form>
-        <div class="hello__close-wrapper">
+        <div class="hello__close-wrapper" @click.prevent="open = false">
             <img src="{{ theme.path ~ '/static/img/x.svg' }}" alt="" class="hello__close-icon">
         </div>
     </div>
