@@ -699,7 +699,23 @@
   height: 1.125rem;
 }
 
-.gform_button {
+.gform_button,
+.gform_next_button {
   @extend .btn;
   @extend .btn--primary;
+}
+
+#input_2_4_6,
+#input_2_11,
+.gfield_select {
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  background-color: map-get($slate, "50");
+  border-radius: 0.25rem;
+  border: unset;
+}
+
+#input_2_5 {
+  width: 100%;
 }
