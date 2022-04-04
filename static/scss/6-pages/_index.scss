@@ -228,9 +228,26 @@
 
 #projects {
   background-color: #f3f8fa;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    background-image: url("static/img/trees.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 .projects__card {
+  position: relative;
+  z-index: 100;
   width: 100%;
   max-width: 60.625rem;
   margin: 0 auto;
@@ -492,57 +509,59 @@
 }
 
 #contact {
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+
   @media screen and (max-width: (map-get($breakpoints, "small") - 0.0625rem)) {
     padding-top: 2.5rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 17.5rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "medium") - 0.0625rem)) {
     padding-top: 3.75rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 18.75rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "medium")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
     padding-top: 5rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 20rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "large")) and (max-width: (map-get($breakpoints, "xl") - 0.0625rem)) {
     padding-top: 6.25rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 36.25rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "xl")) and (max-width: (map-get($breakpoints, "2xl") - 0.0625rem)) {
-    padding: 7.5rem 0;
     padding-top: 7.5rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 37.5rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "2xl")) {
     padding-top: 8.75rem;
-    padding-right: 0;
-    padding-left: 0;
-    padding-bottom: 38.75rem;
   }
 }
 
 #mountains {
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    min-height: 15rem;
+    //min-height: 15rem;
+    padding-top: 15rem;
+    padding-bottom: 7.5rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    min-height: 30rem;
+    //min-height: 30rem;
+    padding-top: 30rem;
+    padding-bottom: 15rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 20rem;
+    background-image: url("static/img/birds.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
 
   &::after {
