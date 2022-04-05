@@ -26,3 +26,20 @@
     color: $white;
   }
 }
+
+.content__leaf {
+  position: absolute;
+  width: 15rem;
+  height: auto;
+  left: -2.5rem;
+  top: 10rem;
+  opacity: 0.5;
+}
+
+.content__moose {
+  position: absolute;
+  width: 12rem;
+  height: auto;
+  right: -1rem;
+  top: 50%;
+}

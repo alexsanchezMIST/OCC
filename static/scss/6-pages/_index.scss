@@ -269,7 +269,6 @@
   margin: 0 auto;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
-  background-image: url("static/img/member.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -281,6 +280,18 @@
   @media screen and (min-width: map-get($breakpoints, "large")) {
     padding: 5rem;
   }
+}
+
+#field {
+  background-image: url("static/img/field-leader.webp");
+}
+
+#training {
+  background-image: url("static/img/outdoor-activity-club.jpg");
+}
+
+#other {
+  background-image: url("static/img/outdoor-sector.jpg");
 }
 
 .projects__left {
@@ -583,6 +594,10 @@
   @media screen and (min-width: map-get($breakpoints, "large")) {
     grid-column: span 2 / span 2;
   }
+}
+
+#contact-form > input[type="submit"] {
+  height: 4rem;
 }
 
 .contact__email-wrapper {
