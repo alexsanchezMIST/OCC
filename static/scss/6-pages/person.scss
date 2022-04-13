@@ -1,0 +1,29 @@
+// ********************
+// PERSON
+// ********************
+
+.content__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 65ch;
+}
+
+.person__thumbnail {
+  @extend .people__card__image;
+  margin-bottom: 1.25rem;
+}
+
+.person__heading {
+  @extend h2;
+}
+
+.person__position {
+  font-weight: 500;
+  color: $amaranth;
+}
+
+.person__btn {
+  @extend .btn;
+  @extend .btn--secondary;
+  margin-top: 2.5rem;
+}

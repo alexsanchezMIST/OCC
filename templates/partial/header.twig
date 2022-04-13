@@ -1,0 +1,36 @@
+<header class="header" >
+    {% block header %}
+        <nav id="nav-main" class="nav-main" role="navigation">
+            <div class="nav__container">
+                <a href="/" rel="home" class="nav__brand">
+                    <img src="{{ theme.path ~ '/static/img/occ-logo.svg' }}" alt="" class="nav__logo">
+                </a>
+                <div class="nav__menu">
+                    {% for item in menu.get_items %}
+                        {% if item.children %} 
+                            <div class="nav__link-wrapper dropdown" x-data="{ open: false }" @click="open = ! open">
+                                <div class="nav__link dropdown-toggle">
+                                    {{ item.title }}
+                                    <img src="{{ theme.path ~ '/static/img/chevron-down.svg' }}" class="dropdown__icon">
+                            </div>
+                                <div class="dropdown__menu" x-show="open" @click.outside="open = false" x-transition>
+                                    {% for child in item.children %} 
+                                        <a href="{{ child.link }}" class="dropdown__item">{{ child.title }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% else %} 
+                            <div class="nav__link-wrapper">
+                                <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
+                            </div>
+                        {% endif %} 
+                    {% endfor %} 
+                </div>
+                <div class="nav__right">
+                    <a href="/login" class="nav__link">Login</a>
+                    <a href="#" class="nav__btn">Sign up</a>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+</header>

@@ -78,12 +78,6 @@
   }
 }
 
-.content__wrapper {
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
-}
-
 .prose--cos {
   @extend .prose;
 }

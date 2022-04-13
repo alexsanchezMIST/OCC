@@ -6,8 +6,7 @@
 <section id="hero--page" class="section section--hero">
     <div class="container">
         <div class="hero__wrapper">
-            <h1 class="hero__heading--page">Team Members</h1>
-            <a href="/" class="btn btn--primary">Become a member →</a>
+            <h1 class="people__heading">Our People</h1>
         </div>
     </div>
 </section>
@@ -17,13 +16,15 @@
 <section id="people" class="section">
     <div class="container">
         <div class="people__wrapper">
-            {% for post in team_members %}
-            <a href="{{ post.link }}" class="people__card">
-                {% if post.thumbnail %}
-                <img src="{{ post.thumbnail }}" alt="" class="people__card__image">
+            {% for person in people %}
+            <a href="{{ person.link }}" class="people__card">
+                {% if person.thumbnail %}
+                <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
                 {% endif %}
-                <h3 class="people__card__heading">{{ post.title }}</h3>
-                <p class="people__card__title">{{ post.position }}</p>
+                <div class="people__right">
+                    <h3 class="people__card__heading">{{ person.title }}</h3>
+                    <p class="people__card__title">{{ person.position }}</p>
+                </div>
             </a>
             {% endfor %}
         </div>

@@ -1,13 +1,19 @@
-{% extends 'base.twig' %}
+{% extends "base.twig" %}
 
 {% block content %}
-
-<section id="person" class="section">
-    <div class="container">
-        <article class="prose">
-            {{ post.content }}
-        </article>
-    </div>
-</section>
-
+	<section id="content" class="section">
+        <div class="container">
+            <div class="content__wrapper">
+                {% if post.thumbnail %}
+                    <img src="{{ post.thumbnail }}" alt="" class="person__thumbnail">
+                {% endif %}
+                <h1 class="person__heading">{{ post.title }}</h1>
+                <p class="person__position">{{ post.meta('position') }}</p>
+                <article class="prose">
+                    {{ post.content }}
+                </article>
+                <a href="/people" class="person__btn">← Back to Our People</a>
+            </div>
+        </div>
+	</section>
 {% endblock %}

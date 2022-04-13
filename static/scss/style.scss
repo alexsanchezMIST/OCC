@@ -21,6 +21,7 @@
 // ********************
 
 @import "3-globals/base";
+@import "3-globals/font-face";
 @import "3-globals/typography";
 
 // ********************
@@ -48,5 +49,6 @@
 @import "6-pages/index";
 @import "6-pages/page";
 @import "6-pages/people";
+@import "6-pages/person";
 @import "6-pages/quiz";
 @import "6-pages/resources";
