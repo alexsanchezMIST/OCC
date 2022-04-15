@@ -1,0 +1,27 @@
+// ********************
+// FOOTER
+// ********************
+
+#footer {
+  padding: 1.25rem 0;
+  background-color: $cello;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  @extend .nav__logo;
+}
+
+.footer__link {
+  @extend .nav__link;
+
+  &:hover {
+    color: $white;
+  }
+}

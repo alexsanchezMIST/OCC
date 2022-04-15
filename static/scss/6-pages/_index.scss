@@ -97,38 +97,6 @@
 }
 
 // ********************
-// PROJECTS SECTION
-// ********************
-
-#projects {
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    left: 0;
-    width: 100%;
-    background-image: url("static/img/border-jagged.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-
-    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-      top: 0rem;
-      height: 2.5rem;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, "large")) {
-      top: 0rem;
-      height: 5rem;
-    }
-  }
-}
-
-.section__heading {
-  text-align: center;
-}
-
-// ********************
 // RESOURCES SECTION
 // ********************
 
@@ -206,6 +174,10 @@
 }
 
 .resources__heading {
+  @extend h4;
+  font-weight: 700;
+  color: map-get($slate, "600");
+  letter-spacing: -0.025em;
   margin-bottom: 0.625rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
@@ -214,6 +186,7 @@
 }
 
 .resources__summary {
+  color: map-get($slate, "400");
   margin-bottom: 1.25rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
@@ -245,6 +218,28 @@
 #projects {
   background-color: #f3f8fa;
 
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("static/img/border-jagged.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+      top: 0rem;
+      height: 2.5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "large")) {
+      top: 0rem;
+      height: 5rem;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -259,6 +254,12 @@
     background-position: center center;
     background-size: cover;
   }
+}
+
+.section__heading {
+  max-width: 48.125rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .projects__card {
@@ -305,6 +306,8 @@
 }
 
 .projects__heading {
+  @extend h3;
+  font-weight: 700;
   color: $white;
 
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
@@ -479,9 +482,10 @@
   width: 100%;
   max-width: 60.625rem;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  grid-template-rows: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
   padding: 2.5rem 1.25rem;
@@ -496,11 +500,10 @@
   }
 }
 
-.member__left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+.member__content {
+  width: 100%;
+  max-width: 35.625rem;
+  text-align: center;
 }
 
 .member__heading {
@@ -598,6 +601,7 @@
 
 #contact-form > input[type="submit"] {
   height: 4rem;
+  max-width: none;
 }
 
 .contact__email-wrapper {

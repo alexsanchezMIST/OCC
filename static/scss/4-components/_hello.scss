@@ -20,6 +20,8 @@
 }
 
 .hello__heading {
+  @extend h5;
+  font-weight: 700;
   color: $white;
 }
 

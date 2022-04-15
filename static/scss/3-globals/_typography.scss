@@ -23,6 +23,7 @@ h6 {
 h1 {
   font-weight: 700;
   color: map-get($slate, "900");
+  letter-spacing: -0.05em;
 
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 2.25rem;
@@ -58,6 +59,7 @@ h1 {
 h2 {
   font-weight: 500;
   color: map-get($slate, "900");
+  letter-spacing: -0.05em;
 
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 1.875rem;
@@ -91,6 +93,8 @@ h2 {
 }
 
 h3 {
+  letter-spacing: -0.025em;
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -123,6 +127,8 @@ h3 {
 }
 
 h4 {
+  letter-spacing: -0.025em;
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 1.25rem;
     line-height: 1.75rem;
