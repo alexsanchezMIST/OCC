@@ -24,11 +24,15 @@
                                 <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
                             </div>
                         {% endif %} 
-                    {% endfor %} 
+                    {% endfor %}
+                    <a href="#" class="nav__link--members">Members Area</a>
                 </div>
                 <div class="nav__right">
                     <a href="/login" class="nav__link">Login</a>
                     <a href="#" class="nav__btn">Sign up</a>
+                </div>
+                <div class="nav__hamburger">
+                    <img src="{{ theme.path ~ '/static/img/menu.svg' }}" alt="" class="nav__logo--hamburger">
                 </div>
             </div>
         </nav>

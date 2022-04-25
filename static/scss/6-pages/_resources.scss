@@ -1,25 +1,26 @@
 .content__download {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 29.375rem;
   margin-top: 3.75rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.75rem;
+  background-color: #f7efd5;
+  border: 3px dashed #92782e;
   box-shadow: 0 10px 15px -3px rgba($black, 0.1),
     0 4px 6px -4px rgba($black, 0.1);
   overflow: none;
-}
+  color: #92782e;
+  transition: all 0.3s ease-in-out;
 
-.download__left {
-  grid-column: span 1 / span 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: map-get($slate, "50");
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  }
 }
 
 .download__right {
@@ -29,16 +30,6 @@
   justify-content: center;
   align-items: center;
   padding: 2.5rem;
-}
-
-.icon {
-  width: 3rem;
-  height: 3rem;
-  margin-right: 1.25rem;
-  background-image: url("static/img/google-drive.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }
 
 .download__copy {

@@ -2,16 +2,36 @@
 // OUR PEOPLE
 // ********************
 
-.people__heading {
+.our-people__heading {
   @extend .hero__heading;
   margin-bottom: unset;
 }
 
+.people__heading {
+  @extend h3;
+  margin-bottom: 1.25rem;
+}
+
+.wrapper--staff,
+.wrapper--board,
+.wrapper--committee {
+  margin-bottom: 2.5rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 5rem;
+  }
+}
+
 .people__wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(auto, minmax(0, 1fr));
   gap: 1.875rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(auto, minmax(0, 1fr));
+  }
 }
 
 .people__card {

@@ -37,7 +37,7 @@ function reloadTask(cb) {
 }
 
 function watchTask() {
-  watch(["*.twig", "*.php"], reloadTask);
+  watch(["*.twig", "*.php", "templates/**/*.twig"], reloadTask);
   watch(
     ["static/**/**/*.scss", "static/**/*.js"],
     series(scssTask, jsTask, reloadTask)

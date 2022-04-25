@@ -5,14 +5,16 @@
 {# BEGIN HERO SECTION #}
 <section id="hero" class="section section--hero" x-data="{ open: false }">
     <div class="container">
-        <div class="hero__wrapper">
-            <button class="hero__play-btn" @click="open = true">
-                <img src="{{ theme.path ~ '/static/img/play.svg' }}" alt="">
-            </button>
-            <h1 class="hero__heading" data-aos="fade-up">Connecting Canadians<br/>to the Outdoors</h1>
-            <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut error id in unde perferendis odio impedit enim.</p>
-            <a href="/membership-benefits" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
-        </div>
+        <div class="hero__grid">
+            <div class="hero__left">
+                <h1 class="hero__heading" data-aos="fade-up">Connecting Canadians<br/>to the Outdoors</h1>
+                <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut error id in unde perferendis odio impedit enim.</p>
+                <a href="/membership-benefits" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
+            </div>
+            <div class="hero__right">
+                <button class="hero__play-btn" @click="open = true"></button>
+            </div>    
+        </div> 
     </div>
     <div class="hero__modal" x-cloak x-show="open" x-transition>
         <div class="hero__video-wrapper">
@@ -26,22 +28,24 @@
 {# BEGIN RESOURCES SECTION #}
 <section id="resources" class="section">
     <div class="container">
-        <h2 class="section__heading" data-aos="fade-up">Our Resources</h2>
+        <div class="section__helmet">
+            <h2 class="section__heading" data-aos="fade-up">Our Resources</h2>
+        </div>
         <div class="resources__wrapper" data-aos="fade" data-aos-delay="50">
             <div id="dei" class="resources__card">
                 <h3 class="resources__heading">DEI Resource List</h3>
-                <p class="resources__summary">Lorem ipsum dolor sit amet</p>
-                <a href="/dei-download" target="_blank" class="btn btn--secondary">Download now<span class="download-icon"></span></a>
+                <p class="resources__summary">A Canadian list for Canadians.</p>
+                <a href="/dei-download" target="_blank" class="btn btn--secondary"><span class="download-icon"></span>Download now</a>
             </div>
             <div id="impact" class="resources__card">
                 <h3 class="resources__heading">Economic Impact Study</h3>
-                <p class="resources__summary">Lorem ipsum dolor sit amet</p>
-                <a href="/economic-download" target="_blank" class="btn btn--secondary">Download now<span class="download-icon"></span></a>
+                <p class="resources__summary">An OCC-led study.</p>
+                <a href="/economic-download" target="_blank" class="btn btn--secondary"><span class="download-icon"></span>Download now</a>
             </div>
             <div id="leading" class="resources__card">
-                <h3 class="resources__heading">Guidebook</h3>
-                <p class="resources__summary">Lorem ipsum dolor sit amet</p>
-                <a href="/guidebook-download" target="_blank" class="btn btn--secondary">Download now<span class="download-icon"></span></a>
+                <h3 class="resources__heading">Tips & Tricks</h3>
+                <p class="resources__summary">Leading when participants express difficult behaviors.</p>
+                <a href="/guidebook-download" target="_blank" class="btn btn--secondary"><span class="download-icon"></span>Download now</a>
             </div>
         </div>
     </div>
@@ -51,7 +55,9 @@
 {# BEGIN PROJECTS SECTION #}
 <section id="projects" class="section">
     <div class="container">
-        <h2 class="section__heading" data-aos="fade-up">Our Projects</h2>
+        <div class="section__helmet">
+            <h2 class="section__heading" data-aos="fade-up">Our Projects</h2>
+        </div>
         <div class="projects__wrapper" x-data="{ tab: 'field' }">
             <div class="projects__tabs-wrapper">
                 <a href="#" class="projects__tab { 'active': tab === 'field' }" @click.prevent="tab = 'field'">1. Field Leader Program</a>
@@ -179,6 +185,7 @@
             <input type="text" placeholder="First name" id="first-name" required>
             <input type="text" placeholder="Last name" id="last-name" required>
             <input type="email" placeholder="Enter your email address" id="email" required>
+            <textarea name="message" id="message" placeholder="Type your message here"></textarea>
             <input type="submit" value="Submit" id="submit">
         </form>
         <div class="contact__email-wrapper">

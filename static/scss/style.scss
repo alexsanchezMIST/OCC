@@ -8,9 +8,9 @@
 // 1 - HELPERS
 // ********************
 
+@import "1-helpers/variables";
 @import "1-helpers/breakpoints";
 @import "1-helpers/keyframes";
-@import "1-helpers/variables";
 
 // ********************
 // 2 - VENDORS
@@ -48,6 +48,7 @@
 
 @import "6-pages/cos";
 @import "6-pages/index";
+@import "6-pages/membership-benefits";
 @import "6-pages/page";
 @import "6-pages/people";
 @import "6-pages/person";
