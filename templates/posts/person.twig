@@ -7,8 +7,16 @@
                 {% if post.thumbnail %}
                     <img src="{{ post.thumbnail }}" alt="" class="person__thumbnail">
                 {% endif %}
-                <h1 class="person__heading">{{ post.title }}</h1>
-                <p class="person__position">{{ post.meta('position') }}</p>
+                <div class="section__helmet">
+                    <h1 class="person__heading">{{ post.title }}</h1>
+                    <div class="person__info-wrapper">
+                        <p class="person__position">{{ post.meta('position') }}</p>
+                        {% if post.meta('email') %}
+                            <p class="person__bullet">•</p>
+                            <a href="mailto:{{ post.meta('email') }}" class="person__email">{{ post.meta('email') }}</a>
+                        {% endif %}
+                    </div> 
+                </div>
                 <article class="prose">
                     {{ post.content }}
                 </article>

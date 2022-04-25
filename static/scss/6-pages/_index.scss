@@ -5,7 +5,7 @@
 .hero__grid {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, min-content));
   gap: 3.75rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
@@ -26,6 +26,19 @@
 }
 
 .hero__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 7 / span 7;
+  }
+}
+
+.hero__right__img {
   position: relative;
   width: 100%;
   height: auto;
@@ -38,8 +51,18 @@
   outline: 12px solid $white;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    grid-column: span 7 / span 7;
+    transform: rotate(1.5deg);
   }
+}
+
+.hero__right__copy {
+  margin-top: 3.75rem;
+  font-family: "Caveat", sans-serif;
+  font-size: 1.875rem;
+  line-height: 1;
+  font-weight: 500;
+  color: $amaranth;
+  text-align: center;
 }
 
 .hero__wrapper,
@@ -51,7 +74,6 @@
 }
 
 .hero__heading {
-  @extend h2;
   font-weight: 900;
   margin-bottom: 0.625rem;
 
@@ -66,10 +88,10 @@
 }
 
 .hero__subheading + a {
-  margin-top: 1.25rem;
+  margin-top: 0.625rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    margin-top: 2.5rem;
+    margin-top: 1.25rem;
   }
 }
 
@@ -789,4 +811,8 @@
 
 #input_2_5 {
   width: 100%;
+}
+
+.section__helmet {
+  margin-bottom: 1.25rem;
 }

@@ -8,12 +8,15 @@
         <div class="hero__grid">
             <div class="hero__left">
                 <h1 class="hero__heading" data-aos="fade-up">Connecting Canadians<br/>to the Outdoors</h1>
-                <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut error id in unde perferendis odio impedit enim.</p>
+                <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">Watch the video to learn more about our organization.</p>
                 <a href="/membership-benefits" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
             </div>
             <div class="hero__right">
-                <button class="hero__play-btn" @click="open = true"></button>
-            </div>    
+                <div class="hero__right__img">
+                    <button class="hero__play-btn" @click="open = true"></button>
+                </div>
+                <p class="hero__right__copy">Click on the button<br/>to watch our video!</p>
+            </div>
         </div> 
     </div>
     <div class="hero__modal" x-cloak x-show="open" x-transition>
