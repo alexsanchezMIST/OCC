@@ -1,0 +1,31 @@
+// ********************
+// LOGIN
+// ********************
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 29.375rem;
+  margin: 0 auto;
+  background-color: $white;
+  padding: 2.5rem;
+}
+
+.login__heading {
+  @extend h4;
+  text-align: center;
+}
+
+.logo {
+  @extend .nav__logo;
+  margin-bottom: 2.5rem;
+}
+
+#back {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}

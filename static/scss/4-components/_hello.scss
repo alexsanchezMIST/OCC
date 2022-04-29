@@ -9,6 +9,22 @@
   padding: 1.25rem 0;
   width: 100vw;
   background-color: $cello;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 8rem;
+    width: 8rem;
+    background-image: url("static/img/clipboard-list.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transform: translate(0, -50%) rotate(5deg);
+    opacity: 0.2;
+  }
 }
 
 .hello__container {

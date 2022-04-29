@@ -22,7 +22,9 @@
                 {% if person.meta('membership') == 'Staff Member' %}
                 <a href="{{ person.link }}" class="people__card">
                     {% if person.thumbnail %}
-                    <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                        <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                        {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
                     <div class="people__right">
                         <h3 class="people__card__heading">{{ person.title }}</h3>
@@ -38,9 +40,12 @@
             <div class="people__wrapper">
             {% for person in people %}
                 {% if person.meta('membership') == 'National Board Member' %}
+                
                 <a href="{{ person.link }}" class="people__card">
                     {% if person.thumbnail %}
-                    <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                        <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                        {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
                     <div class="people__right">
                         <h3 class="people__card__heading">{{ person.title }}</h3>
@@ -59,6 +64,8 @@
                 <a href="{{ person.link }}" class="people__card">
                     {% if person.thumbnail %}
                     <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                    {% else %} 
+                        <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
                     <div class="people__right">
                         <h3 class="people__card__heading">{{ person.title }}</h3>

@@ -15,6 +15,16 @@ textarea {
   }
 }
 
+textarea {
+  resize: none;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 input[type="text"],
 textarea {
   border: 1px solid map-get($slate, "100");
@@ -93,4 +103,29 @@ input {
 .tribe-linked-type-venue-phone,
 .tribe-linked-type-venue-website {
   display: none;
+}
+
+// ********************
+// MEMBERPRESS FORMS
+// ********************
+
+.mp-form-label label {
+  visibility: hidden;
+}
+
+#mepr_loginform {
+  input[type="submit"] {
+    max-width: unset;
+  }
+}
+
+.mepr-login-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
 }

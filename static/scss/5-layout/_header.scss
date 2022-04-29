@@ -10,14 +10,18 @@ header {
   z-index: 900;
 }
 
-.nav-main {
+.nav {
   display: grid;
   place-items: center;
   width: 100%;
   height: 4.5rem;
-  background-color: $white;
-  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
-    0 4px 6px -4px rgba($black, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  &.is-scrolled {
+    background-color: $white;
+    box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+      0 4px 6px -4px rgba($black, 0.1);
+  }
 }
 
 .nav__container {
@@ -55,14 +59,18 @@ header {
 }
 
 .nav__link {
-  margin: 0 1.25rem;
+  margin: 0 0.625rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-  line-height: 1.5rem;
-  color: map-get($slate, "400");
-  transition: color 0.3s ease-in-out;
+  line-height: 1.33rem;
+  font-weight: 600;
+  color: map-get($slate, "500");
+  border-radius: 0.25rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 
   &:hover {
-    color: $amaranth;
+    background-color: map-get($slate, "50");
   }
 }
 

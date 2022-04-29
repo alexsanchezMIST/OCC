@@ -47,15 +47,16 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  box-shadow: 0 25px 50px -12px rgba($black, 0.5);
   outline: 12px solid $white;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    transform: rotate(1.5deg);
+    transform: rotate(0.75deg);
   }
 }
 
 .hero__right__copy {
+  position: relative;
   margin-top: 3.75rem;
   font-family: "Caveat", sans-serif;
   font-size: 1.875rem;
@@ -63,6 +64,19 @@
   font-weight: 500;
   color: $amaranth;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -7.5rem;
+    right: -10rem;
+    width: 10rem;
+    height: 10rem;
+    background-image: url("static/img/arrow-vector.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
 }
 
 .hero__wrapper,

@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main id="main" class="main--login" role="main">
+
+    {# BEGIN LOGIN SECTION #} 
+    <section id="login" class="section section--full">
+        <div class="container">
+            <div class="form-wrapper">
+                <img src="{{ theme.path ~ '/static/img/occ-logo.svg' }}" alt="" class="logo">
+                <h1 class="login__heading">Sign In</h1>
+                {{ post.content }}
+            </div>
+        </div>
+        <a href="/" id="back" class="btn btn--secondary">← Back to OCC website</a>
+    </section>
+    {# END LOGIN SECTION #}
+
+</main>
+
+{% endblock %}

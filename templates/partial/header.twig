@@ -1,6 +1,6 @@
 <header class="header" >
     {% block header %}
-        <nav id="nav-main" class="nav-main" role="navigation">
+        <nav id="nav" class="nav" role="navigation">
             <div class="nav__container">
                 <a href="/" rel="home" class="nav__brand">
                     <img src="{{ theme.path ~ '/static/img/occ-logo.svg' }}" alt="" class="nav__logo">
@@ -25,11 +25,11 @@
                             </div>
                         {% endif %} 
                     {% endfor %}
-                    <a href="#" class="nav__link--members">Members Area</a>
+                    <a href="#" class="nav__link--members">Members</a>
                 </div>
                 <div class="nav__right">
-                    <a href="/login" class="nav__link">Login</a>
-                    <a href="/membership-benefits" class="nav__btn">Sign up</a>
+                    <a href="/login" class="nav__link">Log In</a>
+                    <a href="/membership-benefits" class="nav__btn">Sign up →</a>
                 </div>
                 <div class="nav__hamburger">
                     <img src="{{ theme.path ~ '/static/img/menu.svg' }}" alt="" class="nav__logo--hamburger">

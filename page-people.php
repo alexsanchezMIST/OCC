@@ -7,8 +7,9 @@ $args = array(
     'post_status' => 'publish',
     'perm' => 'readable',
     'nopaging' => true,
-    'orderby' => 'weight',
-    'order' => 'DESC',
+    'meta_key' => 'weight',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
 );
 
 $context['people'] = new Timber\PostQuery($args);
