@@ -117,6 +117,17 @@ input {
   input[type="submit"] {
     max-width: unset;
   }
+
+  label {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
 }
 
 .mepr-login-actions {

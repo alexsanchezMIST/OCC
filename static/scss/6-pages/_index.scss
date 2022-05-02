@@ -201,61 +201,29 @@
   border-radius: 0.5rem;
 
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    padding: 2.5rem 1.25rem;
+    padding: 1.25rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    padding: 5rem 2.5rem;
+    padding: 2.5rem;
   }
 }
 
-#dei,
-#impact,
-#leading {
-  &::before {
-    content: "";
-    margin: auto;
-    position: absolute;
-    top: -3.75rem;
-    right: 0;
-    left: 0;
-    width: 5rem;
-    height: 7.5rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    filter: drop-shadow(0 10px 15px rgba($black, 0.1));
-  }
-}
+.resources__img {
+  width: auto;
+  height: 10rem;
+  box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+  margin-bottom: 1.25rem;
 
-#dei {
-  &::before {
-    background-image: url("static/img/resource-dei-small.png");
-  }
-}
-
-#impact {
-  &::before {
-    background-image: url("static/img/resource-impact-small.png");
-  }
-}
-
-#leading {
-  &::before {
-    background-image: url("static/img/resource-leading-small.png");
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
   }
 }
 
 .resources__heading {
-  @extend h4;
+  @extend h5;
   font-weight: 700;
-  color: map-get($slate, "600");
-  letter-spacing: -0.025em;
   margin-bottom: 0.625rem;
-
-  @media screen and (min-width: map-get($breakpoints, "large")) {
-    margin-bottom: 1.25rem;
-  }
 }
 
 .resources__summary {
@@ -265,6 +233,12 @@
   @media screen and (min-width: map-get($breakpoints, "large")) {
     margin-bottom: 2.5rem;
   }
+}
+
+.resources__summary {
+  font-size: 1rem;
+  line-height: 1.33;
+  color: map-get($slate, "400");
 }
 
 .download-icon {
@@ -330,9 +304,18 @@
 }
 
 .section__heading {
-  max-width: 48.125rem;
-  margin: 0 auto;
-  text-align: center;
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.projects__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects__card {
@@ -368,9 +351,13 @@
   background-image: url("static/img/outdoor-sector.jpg");
 }
 
+.projects__card__wrapper {
+  width: 100%;
+}
+
 .projects__left {
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    width: 75%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -405,33 +392,44 @@
 }
 
 .projects__tabs-wrapper {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 1.25rem auto;
+  border-radius: 0.25rem;
+  background-color: rgba($cutty, 0.1);
+  margin: 0 auto 1.25rem auto;
+  padding: 0.5rem;
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
-    margin: 2.5rem auto;
+    margin-bottom: 2.5rem;
   }
 }
 
 .projects__tab {
+  margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  border: 1px solid $cello;
-  border-radius: 100vw;
+  font-weight: 600;
+  border-radius: 0.25rem;
   transition: all 0.3s ease-in-out;
+  color: map-get($slate, "500");
 
   &:hover {
-    color: $amaranth;
-    border-color: $amaranth;
+    background-color: map-get($slate, "300");
   }
 
-  &:not(last-of-type) {
-    margin-right: 1.25rem;
+  &.active {
+    background-color: $white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
   }
+}
+
+.section__helmet--projects {
+  @extend .section__helmet;
+  margin-bottom: 1.25rem;
 }
 
 // ********************
@@ -472,6 +470,9 @@
   justify-content: center;
   align-items: flex-start;
   background-color: $amaranth;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  font-weight: 400;
   color: $white;
 
   @media screen and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
@@ -489,8 +490,12 @@
   }
 }
 
+.testimonial__author {
+  font-weight: 700;
+}
+
 .testimonial__copy {
-  margin-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
 }
 
 // ********************
@@ -828,5 +833,32 @@
 }
 
 .section__helmet {
+  width: 100%;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.section__subheading {
+  @extend .hero__subheading;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: $amaranth;
+  text-transform: uppercase;
+  background-color: rgba($amaranth, 0.05);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 1.25rem;
 }

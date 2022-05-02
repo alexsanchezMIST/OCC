@@ -44,3 +44,8 @@
 .person__bullet {
   margin: 0 0.5rem;
 }
+
+.section__helmet--person {
+  @extend .section__helmet;
+  text-align: start;
+}
