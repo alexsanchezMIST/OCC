@@ -31,7 +31,14 @@
 }
 
 .toggle__flag {
-  font-size: 2rem;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+
+  &.active {
+    color: $amaranth;
+  }
 }
 
 .toggle__btn {
