@@ -16,8 +16,8 @@
                         </div>
                         <span class="toggle__flag">FR</span>
                     </div>
-                    <h1 class="hero__heading" data-aos="fade-up">Connecting Canadians<br/>to the Outdoors</h1>
-                    <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">To promote and enable outdoor education and activity.</p>
+                    <h1 class="hero__heading" data-aos="fade-up">{{ post.meta('headline') }}</h1>
+                    <p class="hero__subheading" data-aos="fade-up" data-aos-delay="50">{{ post.meta('sub-headline') }}</p>
                     <a href="/membership-benefits" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
                 </div>
                 <div class="hero__right">
@@ -42,8 +42,8 @@
         <div class="container">
             <div class="section__helmet">
                 <p class="badge">Free downloads</p>
-                <h2 class="section__heading" data-aos="fade-up">Our Resources</h2>
-                <p class="section__subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi, aliquid et voluptas accusantium corrupti, neque dignissimos ipsam asperiores corporis suscipit. Natus harum incidunt nisi nobis minus. Inventore, necessitatibus in.</p>
+                <h2 class="section__heading" data-aos="fade-up">{{ post.meta('resources-headline') }}</h2>
+                <p class="section__subheading">{{ post.meta('resources-sub-headline') }}</p>
             </div>
             <div class="resources__wrapper" data-aos="fade" data-aos-delay="50">
                 {% for post in optins %}
