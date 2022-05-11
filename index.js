@@ -1,2 +1,2 @@
-const toggle=document.querySelector("#toggle"),toggleButton=document.querySelector("#toggle-btn");toggle.addEventListener("click",(()=>{toggle.classList.toggle("is-red"),toggleButton.classList.toggle("is-clicked")}));const nav=document.querySelector(".nav");window.onscroll=()=>{window.scrollY>0?nav.classList.add("is-scrolled"):nav.classList.remove("is-scrolled")};
+const nav=document.querySelector(".nav");window.onscroll=()=>{window.scrollY>0?nav.classList.add("is-scrolled"):nav.classList.remove("is-scrolled")};
 //# sourceMappingURL=index.js.map
