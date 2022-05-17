@@ -770,21 +770,33 @@
 // CAROUSEL SECTION
 // ********************
 
+.carousel {
+  width: calc(17.5rem * 20);
+  height: auto;
+  animation: horizontalScroll 60s linear infinite;
+}
+
 .carousel__wrapper {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation: horizontalScroll 30s linear infinite;
 }
 
-.carousel__wrapper > img {
+.carousel__slide {
+  display: grid;
+  place-items: center;
+  width: 17.5rem;
+  height: 5rem;
+}
+
+.carousel__slide > img {
   width: auto;
-  margin: 0 2.5rem;
   opacity: 0.5;
 }
 
 .carousel__logo--expert-voice,
+.carousel__logo--cwf,
 .carousel__logo--zoppinh {
   height: 2.5rem;
 }
@@ -793,7 +805,6 @@
 .carousel__logo--joelette,
 .carousel__logo--hikens,
 .carousel__logo--viristar,
-.carousel__logo--cwf,
 .carousel__logo--black-diamond {
   height: 3rem;
 }
