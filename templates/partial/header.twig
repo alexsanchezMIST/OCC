@@ -13,9 +13,19 @@
                                     {{ item.title }}
                                     <img src="{{ theme.path ~ '/static/img/chevron-down.svg' }}" class="dropdown__icon">
                             </div>
-                                <div class="dropdown__menu" x-show="open" @click.outside="open = false" x-transition>
+                                <div class="dropdown__menu" x-show="open" @click.outside="open = false" x-cloak x-transition>
                                     {% for child in item.children %} 
-                                        <a href="{{ child.link }}" class="dropdown__item">{{ child.title }}</a>
+                                        <a href="{{ child.link }}" class="dropdown__item">
+                                            {% if child.master_object.meta('icon') %}
+                                                <img src="{{ Image(child.master_object.meta('icon')).src }}" alt="" class="dropdown__item__icon">
+                                            {% endif %}
+                                            <div class="dropdown__item__right">
+                                                <p class="dropdown__link">{{ child.title }} →</p>
+                                                {% if child.master_object.meta('teaser') %}
+                                                    <p class="dropdown__teaser">{{ child.master_object.meta('teaser') }}</p>
+                                                {% endif %}
+                                            </div>
+                                        </a>
                                     {% endfor %}
                                 </div>
                             </div>
