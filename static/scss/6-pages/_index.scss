@@ -97,6 +97,7 @@
 }
 
 .hero__subheading {
+  @extend h5;
   font-weight: 500;
   color: map-get($slate, "400");
 }

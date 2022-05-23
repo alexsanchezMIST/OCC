@@ -43,7 +43,6 @@
             <div class="section__helmet">
                 <p class="badge">Free downloads</p>
                 <h2 class="section__heading" data-aos="fade-up">Free Resources</h2>
-                <p class="section__subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam commodi, aliquid et voluptas accusantium corrupti, neque dignissimos ipsam asperiores corporis suscipit. Natus harum incidunt nisi nobis minus. Inventore, necessitatibus in.</p>
             </div>
             <div class="resources__wrapper" data-aos="fade" data-aos-delay="50">
                 {% for post in optins %}
@@ -72,27 +71,15 @@
                     <a href="#" class="projects__tab" :class="{ 'active': tab === 'other' }" @click.prevent="tab = 'other'">3. Other Outdoor Organizations</a>
                 </div>
                 <div class="projects__card__wrapper">
-                    <div id="field" class="projects__card" x-show="tab === 'field'" x-transition>
+                    {% for post in projects %} 
+                    <div id="{{ post.meta('meta_name') }}" class="projects__card" x-show="tab === '{{ post.meta('meta_name') }}'">
                         <div class="projects__left">
-                            <h2 class="projects__heading">Field Leader Program</h2>
-                            <p class="projects__subheading">This program is designed to empower students to ensure physical and emotional safety for their participants, manage logistics, solve problems, and provide meaningful experiences outside.</p>
-                            <a href="/field-leader-program" class="btn btn--primary">Learn more →</a>
+                            <h2 class="projects__heading">{{ post.title }}</h2>
+                            <p class="projects__subheading">{{ post.meta('description') }}</p>
+                            <a href="{{ post.link }}" class="btn btn--primary">Learn more →</a>
                         </div>
                     </div>
-                    <div id="training" class="projects__card" x-show="tab === 'training'" x-transition>
-                        <div class="projects__left">
-                            <h2 class="projects__heading">Training Providers</h2>
-                            <p class="projects__subheading">These organizations offer at least one type of program to help you develop as an outdoor practitioner and/or leader. The list is not exhaustive and not exclusive.</p>
-                            <a href="/outdoor-training-organizations" class="btn btn--primary">Learn more →</a>
-                        </div>
-                    </div>
-                    <div id="other" class="projects__card" x-show="tab === 'other'" x-transition>
-                        <div class="projects__left">
-                            <h2 class="projects__heading">Other Outdoor Organizations</h2>
-                            <p class="projects__subheading">This page presents a list of organizations working to promote the outdoors from a diversity of perspectives. The list below is not exhaustive, nor exclusive. </p>
-                            <a href="/organizations-in-the-outdoor-sector" class="btn btn--primary">Learn more →</a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -117,7 +104,7 @@
                     </div>
                 </div>
                 <div class="about__right" data-aos="fade-up" data-aos-delay="100">
-                    <article class="prose">
+                    <article class="prose mb-10">
                         <p><strong>OCC members represent the thousands of individuals and businesses who bring Canadians outdoors.</strong> Every year, these people offer powerful experiences to millions of Canadians and contribute billions of dollars to the Canadian economy.</p>
                         <p>For us, success means creating a reality where outdoor programs and their staff are recognized for their true value, the unfair risk perception associated with going outdoors is eliminated, governments invest to develop the sector, and other unnecessary barriers such as unreasonable insurance premiums are removed.</p>
                         <p>The outdoor sector has a wealth of passionate individuals abounding in expertise, and dozens of organizations dedicated to bringing real value to their community. However, the lack of cohesion in individual efforts leads to an incalculable amount of wasted resources.</p> 

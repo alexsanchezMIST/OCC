@@ -33,7 +33,15 @@ $args = array(
     'order' => 'ASC',
 );
 
+$args_projects = array(
+    'post_type' => 'project',
+    'post_status' => 'publish',
+    'perm' => 'readable',
+    'nopaging' => true,
+);
+
 $context['optins'] =  new Timber\PostQuery($args);
+$context['projects'] = new Timber\PostQuery($args_projects);
 
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;

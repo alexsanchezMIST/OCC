@@ -13,7 +13,7 @@
                                     {{ item.title }}
                                     <img src="{{ theme.path ~ '/static/img/chevron-down.svg' }}" class="dropdown__icon">
                             </div>
-                                <div class="dropdown__menu" x-show="open" @click.outside="open = false" x-cloak x-transition>
+                                <div class="dropdown__menu" x-show="open" @click.outside="open = false" x-cloak>
                                     {% for child in item.children %} 
                                         <a href="{{ child.link }}" class="dropdown__item">
                                             {% if child.master_object.meta('icon') %}
@@ -37,8 +37,12 @@
                     {% endfor %}
                 </div>
                 <div class="nav__right">
-                    <a href="/login" class="nav__link">Log In</a>
-                    <a href="/membership-benefits" class="nav__btn">Sign up →</a>
+                    {% for item in membership_menu.get_items %}
+                        <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
+                        {% if item.slug == 'sign-up' %}
+                            <a href="{{ item.link }}" class="nav__btn">{{ item.title }} →</a>
+                        {% endif %}
+                    {% endfor %} 
                 </div>
                 <div class="nav__hamburger">
                     <img src="{{ theme.path ~ '/static/img/menu.svg' }}" alt="" class="nav__logo--hamburger">

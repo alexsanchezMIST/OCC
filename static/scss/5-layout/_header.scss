@@ -124,7 +124,8 @@ header {
   position: absolute;
   top: calc(100% + 1.25rem);
   right: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin: auto;
   width: max-content;
   padding: 1rem;
