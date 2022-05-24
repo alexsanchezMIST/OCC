@@ -38,7 +38,7 @@
                 </div>
                 <div class="nav__right">
                     {% for item in membership_menu.get_items %}
-                        <a href="{{ item.link }}" class="nav__link">{{ item.title }}</a>
+                        <a href="{{ item.link }}" class="nav__link--membership">{{ item.title }}</a>
                         {% if item.slug == 'sign-up' %}
                             <a href="{{ item.link }}" class="nav__btn">{{ item.title }} →</a>
                         {% endif %}

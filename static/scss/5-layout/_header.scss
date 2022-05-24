@@ -72,11 +72,11 @@ header {
   &:hover {
     background-color: map-get($slate, "50");
   }
-}
 
-.nav__link--members {
-  @extend .nav__link;
-  color: $amaranth;
+  &--membership {
+    @extend .nav__link;
+    color: $amaranth;
+  }
 }
 
 .nav__right {
