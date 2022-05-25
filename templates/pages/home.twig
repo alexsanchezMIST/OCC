@@ -29,10 +29,12 @@
             </div> 
         </div>
         <div class="hero__modal" x-cloak x-show="open" x-transition>
-            <div class="hero__video-wrapper">
-                <iframe class="hero__video" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/tNaRQ2HmyTQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <button class="hero__modal__close" @click="open = false">Close</button>        
+            <div class="hero__modal__content">
+                <div class="hero__video-wrapper">
+                    <iframe class="hero__video" src="https://www.youtube-nocookie.com/embed/tNaRQ2HmyTQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <button class="hero__modal__close" @click="open = false">Close</button>       
+            </div> 
         </div>
     </section>
     {# END HERO SECTION #}
