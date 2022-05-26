@@ -11,7 +11,7 @@
             <article class="prose mx-auto">
                 {{ post.content }}
             </article>
-            <a href="/" class="resource__download">
+            <a href="{{ post.meta('resource_link') }}" target="_blank" class="resource__download">
                 <p class="resource__download__copy">View your resources</p>
             </a>
         </div>
