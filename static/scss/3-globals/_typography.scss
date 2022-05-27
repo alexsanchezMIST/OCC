@@ -303,6 +303,10 @@ strong {
   color: map-get($slate, "700");
 }
 
+.prose ol {
+  list-style: decimal inside;
+}
+
 .prose {
   ul > li {
     position: relative;
@@ -328,5 +332,13 @@ strong {
 
 .prose blockquote {
   border-left: 10px solid $amaranth;
+  margin: 2.5rem 0;
   padding-left: 2.5rem;
+  color: map-get($slate, "400");
+
+  > cite {
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 600;
+  }
 }

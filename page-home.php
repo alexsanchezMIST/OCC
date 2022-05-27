@@ -38,6 +38,9 @@ $args_projects = array(
     'post_status' => 'publish',
     'perm' => 'readable',
     'nopaging' => true,
+    'meta_key' => 'order',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
 );
 
 $context['optins'] =  new Timber\PostQuery($args);

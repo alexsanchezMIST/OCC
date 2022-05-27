@@ -2,22 +2,24 @@
 // ACCOUNT
 // ********************
 
-#mepr-account-nav {
-  @extend .projects__tabs-wrapper;
-}
+.account__wrapper {
+  @extend .prose;
 
-.mepr-nav-item {
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease-in-out;
-  color: map-get($slate, "500");
-}
+  padding: 2.5rem;
+  background-color: map-get($slate, "50");
+  border: 2px solid map-get($slate, "100");
+  border-radius: 0.5rem;
 
-.mepr-active-nav-tab {
-  background-color: $white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  ul > li {
+    padding-left: unset;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .wishlistmember-mergecode-payperposts-showmorebutton {
+    margin: 0;
+    padding: 0;
+  }
 }

@@ -2,12 +2,14 @@
 
 {% block content %}
 
+<main id="main" class="main" role="main">
+
 {# BEGIN HERO SECTION #}
 <section id="hero--page" class="section section--hero">
     <div class="container">
         <div class="hero__wrapper">
             <h1 class="hero__heading--page">{{ post.title }}</h1>
-            <a href="/" class="btn btn--primary">Become a member →</a>
+            <a href="/sign-up" class="btn btn--primary">Become a member →</a>
         </div>
     </div>
 </section>
@@ -28,5 +30,7 @@
 {# END CONTENT SECTION #}
 
 {% include "partial/mountains.twig" %}
+
+</main>
 
 {% endblock %}

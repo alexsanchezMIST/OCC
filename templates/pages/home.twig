@@ -18,7 +18,7 @@
                     </div>
                     <h1 class="hero__heading mb-2" data-aos="fade-up">Connecting People to the Outdoors</h1>
                     <p class="hero__subheading mb-4" data-aos="fade-up" data-aos-delay="50">Integrating outdoor activity into our national identity.</p>
-                    <a href="/membership-benefits" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
+                    <a href="/sign-up" class="btn btn--primary" data-aos="fade-up" data-aos-delay="100">Become a member →</a>
                 </div>
                 <div class="hero__right">
                     <div class="hero__right__img">
@@ -66,22 +66,22 @@
             <div class="section__helmet--projects">
                 <h2 class="section__heading" data-aos="fade-up">Our Projects</h2>
             </div>
-            <div class="projects__wrapper" x-data="{ tab: 'field' }">
+            <div class="projects__wrapper" x-data="{ tab: '1' }">
                 <div class="projects__tabs-wrapper">
-                    <a href="#" class="projects__tab" :class="{ 'active': tab === 'field' }" @click.prevent="tab = 'field'">1. Field Leader Program</a>
-                    <a href="#" class="projects__tab" :class="{ 'active': tab === 'training' }" @click.prevent="tab = 'training'">2. Training Providers</a>
-                    <a href="#" class="projects__tab" :class="{ 'active': tab === 'other' }" @click.prevent="tab = 'other'">3. Other Outdoor Organizations</a>
+                {% for post in projects %} 
+                    <a href="#" class="projects__tab" :class="{ 'active': tab === '{{ post.meta('order') }}' }" @click.prevent="tab = '{{ post.meta('order') }}'">{{ post.meta('order') }}. {{ post.title }}</a>
+                {% endfor %}
                 </div>
                 <div class="projects__card__wrapper">
-                    {% for post in projects %} 
-                    <div id="{{ post.meta('meta_name') }}" class="projects__card" x-show="tab === '{{ post.meta('meta_name') }}'">
+                {% for post in projects %} 
+                    <div id="{{ post.meta('meta_name') }}" class="projects__card" x-show="tab === '{{ post.meta('order') }}'">
                         <div class="projects__left">
                             <h2 class="projects__heading">{{ post.title }}</h2>
                             <p class="projects__subheading">{{ post.meta('description') }}</p>
                             <a href="{{ post.link }}" class="btn btn--primary">Learn more →</a>
                         </div>
                     </div>
-                    {% endfor %}
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
                 <div class="member__content">
                     <h2 class="member__heading">Become a member</h2>
                     <p class="member__subheading">If you care about the transformational power of going outdoors and increasing the number of people accessing these experiences, join our efforts and become a member.</p>
-                    <a href="/membership-benefits" class="btn btn--primary">Join us →</a>
+                    <a href="/sign-up" class="btn btn--primary">Join us →</a>
                 </div>
             </div>
         </div>
@@ -245,7 +245,7 @@
 
 {% include 'partial/hello-bar.twig' %}
 
-<script>
+<!-- <script>
 
 const toggle = document.querySelector("#toggle");
 const toggleButton = document.querySelector("#toggle-btn");
@@ -255,6 +255,6 @@ toggle.addEventListener("click", () => {
   toggleButton.classList.toggle("is-clicked");
 });
 
-</script>
+</script> -->
 
 {% endblock %}

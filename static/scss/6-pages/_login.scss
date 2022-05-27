@@ -43,7 +43,7 @@
 }
 
 .login__heading {
-  @extend h4;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -76,4 +76,27 @@
   line-height: 1;
   font-weight: 400;
   color: map-get($slate, "100");
+}
+
+.wlm3-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  > p {
+    text-align: center;
+  }
+}
+
+#wlm_form_field_wp-submit {
+  margin: 0 auto 1.25rem auto;
+  max-width: unset;
+}
+
+.wlm3-form .wlm3-form-group label:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
