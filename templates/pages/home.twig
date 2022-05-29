@@ -51,7 +51,7 @@
                 <div class="resources__card">
                     <h3 class="resources__heading">{{ post.title }}</h3>
                     <p class="resources__summary">{{ post.description }}</p>
-                    <img src="{{ post.meta('image') }}" alt="" class="resources__img">
+                    <img src="{{ Image(post.meta('image')).src }}" alt="" class="resources__img">
                     <a href="{{ post.link }}" target="_blank" class="btn btn--secondary"><span class="download-icon"></span>Download now</a>
                 </div>
                 {% endfor %}
@@ -74,7 +74,7 @@
                 </div>
                 <div class="projects__card__wrapper">
                 {% for post in projects %} 
-                    <div id="{{ post.meta('meta_name') }}" class="projects__card" x-show="tab === '{{ post.meta('order') }}'">
+                    <div id="{{ post.meta('meta') }}" class="projects__card" x-show="tab === '{{ post.meta('order') }}'">
                         <div class="projects__left">
                             <h2 class="projects__heading">{{ post.title }}</h2>
                             <p class="projects__subheading">{{ post.meta('description') }}</p>

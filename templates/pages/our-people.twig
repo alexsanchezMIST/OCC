@@ -24,7 +24,7 @@
                 {% if person.meta('membership') == 'Staff Member' %}
                 <a href="{{ person.link }}" class="people__card">
                     {% if person.thumbnail %}
-                        <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                        <img src="{{ person.thumbnail.src }}" alt="" class="people__card__image">
                         {% else %} 
                         <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
@@ -65,7 +65,7 @@
                 {% if person.meta('membership') == 'Curriculum Committee Member' %}
                 <a href="{{ person.link }}" class="people__card">
                     {% if person.thumbnail %}
-                    <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                    <img src="{{ person.thumbnail.src }}" alt="" class="people__card__image">
                     {% else %} 
                         <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
@@ -84,7 +84,7 @@
             {% for person in people %}
                 {% if person.meta('membership') == 'Founder' %}
                 <a href="{{ person.link }}" class="people__card">
-                    {% if person.thumbnail %}
+                    {% if person.thumbnail.src %}
                     <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
                     {% endif %}
                     <div class="people__right">
