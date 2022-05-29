@@ -42,10 +42,9 @@
             <div class="people__wrapper">
             {% for person in people %}
                 {% if person.meta('membership') == 'National Board Member' %}
-                
                 <a href="{{ person.link }}" class="people__card">
-                    {% if person.thumbnail %}
-                        <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                    {% if person.meta('avatar') %}
+                        <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
                         {% else %} 
                         <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
@@ -64,8 +63,8 @@
             {% for person in people %}
                 {% if person.meta('membership') == 'Curriculum Committee Member' %}
                 <a href="{{ person.link }}" class="people__card">
-                    {% if person.thumbnail %}
-                    <img src="{{ person.thumbnail.src }}" alt="" class="people__card__image">
+                    {% if person.meta('avatar') %}
+                    <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
                     {% else %} 
                         <img src="{{ theme.path ~ '/static/img/user.svg' }}" alt="" class="people__card__image">
                     {% endif %}
@@ -84,8 +83,8 @@
             {% for person in people %}
                 {% if person.meta('membership') == 'Founder' %}
                 <a href="{{ person.link }}" class="people__card">
-                    {% if person.thumbnail.src %}
-                    <img src="{{ person.thumbnail }}" alt="" class="people__card__image">
+                    {% if person.meta('avatar') %}
+                    <img src="{{ Image(person.meta('avatar')).src }}" alt="" class="people__card__image">
                     {% endif %}
                     <div class="people__right">
                         <h3 class="people__card__heading">{{ person.title }}</h3>
