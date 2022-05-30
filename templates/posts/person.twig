@@ -4,8 +4,8 @@
 	<section id="content" class="section pt-36">
         <div class="container">
             <div class="content__wrapper">
-                {% if post.thumbnail %}
-                    <img src="{{ post.thumbnail }}" alt="" class="person__thumbnail">
+                {% if post.meta('avatar') %}
+                    <img src="{{ Image(post.meta('avatar')).src }}" alt="" class="person__thumbnail">
                 {% endif %}
                 <div class="section__helmet--person">
                     <h1 class="person__heading">{{ post.title }}</h1>
