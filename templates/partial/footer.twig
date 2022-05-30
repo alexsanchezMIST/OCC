@@ -9,15 +9,21 @@
                 </div>
                 <div class="footer__col">
                     <h5 class="footer__heading">About</h5>
-                    <a href="/home" class="footer__link">Home</a>
-                    <a href="/about-us" class="footer__link">About Us</a>
+                    {% for item in footer_about_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+<!--                     <a href="/about-us" class="footer__link">About Us</a>
                     <a href="/our-history" class="footer__link">Our History</a>
                     <a href="/our-people" class="footer__link">Our People</a>
                     <a href="/partners" class="footer__link">Partners</a>
-                    <a href="/contact-us" class="footer__link">Contact Us</a>
+                    <a href="/contact-us" class="footer__link">Contact Us</a> -->
                 </div>
                 <div class="footer__col">
-                    <div class="footer__col--small">
+                    <h5 class="footer__heading">Useful Links</h5>
+                    {% for item in footer_links_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+<!--                     <div class="footer__col--small">
                         <h5 class="footer__heading">Courses</h5>
                         <a href="/events" class="footer__link">Events</a>
                         <a href="/become-an-instructor" class="footer__link">Become an Instructor</a>
@@ -27,20 +33,26 @@
                         <a href="/directory" class="footer__link">Directory</a>
                         <a href="/documents" class="footer__link">Documents</a>
                         <a href="/canadian-outdoor-summit" class="footer__link">Canadian Outdoor Summit</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="footer__col">
                     <h5 class="footer__heading">Legal</h5>
-                    <a href="/directory" class="footer__link">Privacy Policy</a>
+                    {% for item in footer_legal_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+<!--                     <a href="/directory" class="footer__link">Privacy Policy</a>
                     <a href="/documents" class="footer__link">Terms of Use</a>
                     <a href="/documents" class="footer__link">Disclaimer</a>
-                    <a href="/documents" class="footer__link">Cookies Policy</a>
+                    <a href="/documents" class="footer__link">Cookies Policy</a> -->
                 </div>
                 <div class="footer__col">
                     <h5 class="footer__heading">Membership</h5>
-                    <a href="/login" class="footer__link">Login</a>
+                    {% for item in footer_membership_menu.get_items %}
+                        <a href="{{ item.link }}" class="footer__link">{{ item.title }}</a>
+                    {% endfor %}
+<!--                     <a href="/login" class="footer__link">Login</a>
                     <a href="/my-account" class="footer__link">My Account</a>
-                    <a href="/membership-benefits" class="footer__link">Membership Benefits</a>
+                    <a href="/membership-benefits" class="footer__link">Membership Benefits</a> -->
                 </div>
             </div>
         </div>
@@ -48,7 +60,7 @@
     <div class="footer__bottom py-6">
         <div class="container">
             <div class="footer__bottom-wrapper">
-                <p class="footer__copyright">© 2022 Outdoor Council of Canada - All rights reserved.</p>
+                <p class="footer__copyright">© {{"now"|date('Y')}} Outdoor Council of Canada - All rights reserved.</p>
             </div>
         </div>
     </div>
