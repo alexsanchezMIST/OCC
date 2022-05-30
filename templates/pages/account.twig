@@ -1,6 +1,9 @@
 {% extends "base.twig" %}
 
 {% block content %}
+
+<main id="main" class="main" role="main">
+
 <section id="account" class="section py-18">
     <div class="container">
         <div class="account__wrapper mx-auto">
@@ -8,4 +11,9 @@
         </div>
     </div>
 </section>
+
+{% include "partial/mountains.twig" %}
+
+</main>
+
 {% endblock %}
