@@ -87,6 +87,10 @@ class StarterSite extends Timber\Site {
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['menu']  = new Timber\Menu('main-menu');
 		$context['membership_menu']  = new Timber\Menu('membership-menu');
+		$content['footer_about_menu'] = new Timber\Menu('footer-about-menu');
+		$content['footer_links_menu'] = new Timber\Menu('footer-links-menu');
+		$content['footer_legal_menu'] = new Timber\Menu('footer-legal-menu');
+		$content['footer_membership_menu'] = new Timber\Menu('footer-membership-menu');
 		$context['site']  = $this;
 		return $context;
 	}
