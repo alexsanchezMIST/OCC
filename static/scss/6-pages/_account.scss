@@ -4,7 +4,9 @@
 
 .account__wrapper {
   @extend .prose;
+}
 
+.account__card {
   padding: 2.5rem;
   background-color: map-get($slate, "50");
   border: 2px solid map-get($slate, "100");
@@ -12,6 +14,10 @@
   font-size: 1rem;
   line-height: 1.33rem;
   font-weight: 400;
+
+  &:not(last-of-type) {
+    margin-bottom: 1.25rem;
+  }
 
   ul > li {
     padding-left: unset;
@@ -33,5 +39,11 @@
   .wishlistmember-mergecode-payperposts-showmorebutton {
     margin: 0;
     padding: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    &:not(last-of-type) {
+      margin-bottom: 2.5rem;
+    }
   }
 }
