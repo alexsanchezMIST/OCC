@@ -1,4 +1,14 @@
 // ********************
+// INITIALIZE AOS
+// ********************
+
+AOS.init({
+  duration: 300,
+  easing: "ease-in-out",
+  once: true,
+});
+
+// ********************
 // ANIMATE NAV
 // ********************
 
