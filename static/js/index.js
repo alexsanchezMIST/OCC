@@ -2,6 +2,8 @@
 // INITIALIZE AOS
 // ********************
 
+import { AOS } from "./aos.esm";
+
 AOS.init({
   duration: 300,
   easing: "ease-in-out",

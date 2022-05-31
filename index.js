@@ -1,2 +1,2 @@
-AOS.init({duration:300,easing:"ease-in-out",once:!0});const nav=document.querySelector(".nav");window.onscroll=()=>{window.scrollY>0?nav.classList.add("is-scrolled"):nav.classList.remove("is-scrolled")};
+import{AOS}from"./aos.esm";AOS.init({duration:300,easing:"ease-in-out",once:!0});const nav=document.querySelector(".nav");window.onscroll=()=>{window.scrollY>0?nav.classList.add("is-scrolled"):nav.classList.remove("is-scrolled")};
 //# sourceMappingURL=index.js.map
