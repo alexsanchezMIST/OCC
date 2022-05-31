@@ -17,7 +17,7 @@ function scssTask() {
 }
 
 function jsTask() {
-  return src("static/js/index.js", { sourcemaps: true })
+  return src("static/js/index.mjs", { sourcemaps: true })
     .pipe(terser())
     .pipe(dest(".", { sourcemaps: "." }));
 }

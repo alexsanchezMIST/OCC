@@ -2,9 +2,9 @@
 // INITIALIZE AOS
 // ********************
 
-import { AOS } from "./aos.esm";
+import { aos } from "./aos.cjs.js";
 
-AOS.init({
+aos.init({
   duration: 300,
   easing: "ease-in-out",
   once: true,
