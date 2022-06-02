@@ -19,12 +19,12 @@
         <div class="container">
             <div class="course__wrapper">
                 {% for post in courses %}
-                <a href="{{ post.link }}" class="course__card">
+                <a href="#courses" class="course__card">
                     <img src="{{ Image(post.meta('image')).src }}" alt="" class="course__card__thumbnail">
-                    <a href="#courses" class="course__card__right">
+                    <div class="course__card__right">
                         <h4 class="deal__heading mb-2">{{ post.title }}</h4>
                         <p class="deal__excerpt">{{ post.content }}</p>
-                    </a>
+                    </div>
                 </a>
                 {% endfor %}
             </div>
