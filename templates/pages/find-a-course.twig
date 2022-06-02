@@ -17,12 +17,14 @@
     {# BEGIN CONTENT SECTION #}
     <section id="content" class="section pt-18">
         <div class="container">
-            <div class="deal__wrapper">
+            <div class="course__wrapper">
                 {% for post in courses %}
-                <a href="{{ post.link }}" class="deal__card">
+                <a href="{{ post.link }}" class="course__card">
                     <img src="{{ Image(post.meta('image')).src }}" alt="" class="course__thumbnail mb-8">
-                    <h4 class="deal__heading mb-2">{{ post.title }}</h4>
-                    <p class="deal__excerpt">{{ post.content|excerpt(8) }}</p>
+                    <div class="course__card__right">
+                        <h4 class="deal__heading mb-2">{{ post.title }}</h4>
+                        <p class="deal__excerpt">{{ post.content|excerpt(8) }}</p>
+                    </div>
                 </a>
                 {% endfor %}
             </div>
