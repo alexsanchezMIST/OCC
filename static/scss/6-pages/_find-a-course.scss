@@ -5,6 +5,8 @@
   grid-gap: 1.875rem;
   width: 100%;
   max-width: 48.125rem;
+  margin: 0 auto;
+  padding: 1.25rem;
 }
 
 .course__card {
@@ -12,9 +14,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid map-get($slate, "100");
+  border-radius: 0.75rem;
 }
 
-.course__thumbnail {
+.course__card__thumbnail {
   width: 20%;
   height: 100%;
   box-shadow: 0 10px 15px -3px rgba($black, 0.1),
@@ -22,7 +26,7 @@
   object-fit: cover;
 }
 
-.course__right {
+.course__card__right {
   width: 80%;
   padding: 2.5rem 0;
 }
