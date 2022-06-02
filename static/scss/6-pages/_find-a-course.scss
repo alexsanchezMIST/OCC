@@ -16,6 +16,12 @@
   align-items: center;
   border: 2px solid map-get($slate, "100");
   border-radius: 0.75rem;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba($black, 0.25);
+    border-color: $amaranth;
+  }
 }
 
 .course__card__thumbnail {
@@ -28,5 +34,5 @@
 
 .course__card__right {
   width: 80%;
-  padding: 2.5rem 0;
+  padding: 0 2.5rem;
 }
