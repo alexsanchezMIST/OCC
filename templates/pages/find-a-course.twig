@@ -20,8 +20,8 @@
             <div class="course__wrapper">
                 {% for post in courses %}
                 <a href="#courses" class="course__card">
-                    <img src="{{ Image(post.meta('image')).src }}" alt="" class="course__card__thumbnail">
-                    <div class="course__card__right">
+                    <img src="{{ Image(post.meta('image')).src }}" alt="" class="course__card__thumbnail mb-8">
+                    <div class="course__card__bottom">
                         <h4 class="deal__heading mb-2">{{ post.title }}</h4>
                         <p class="deal__excerpt">{{ post.content }}</p>
                     </div>

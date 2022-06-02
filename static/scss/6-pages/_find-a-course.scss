@@ -11,9 +11,10 @@
 
 .course__card {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  padding: 2.5rem;
   border: 2px solid map-get($slate, "100");
   border-radius: 0.75rem;
   transition: all 0.3s ease-in-out;
@@ -31,9 +32,4 @@
   box-shadow: 0 10px 15px -3px rgba($black, 0.1),
     0 4px 6px -4px rgba($black, 0.1);
   object-fit: cover;
-}
-
-.course__card__right {
-  width: 80%;
-  padding: 0 2.5rem;
 }
